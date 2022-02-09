@@ -1,6 +1,4 @@
-import java.util.Comparator;
-
-public class Employee implements Comparator<Employee>{
+public class Employee implements Comparable<Employee>{
     private String name;
     private String address;
     private String age;
@@ -17,9 +15,14 @@ public class Employee implements Comparator<Employee>{
         switch (i) {
             case 0:
                 return name;
-        
-            default:
+            case 1:
+                return address;
+            case 2:
                 return age;
+            case 3:
+                return dob;
+            default:
+                return "";
         }
     }
 
@@ -28,6 +31,14 @@ public class Employee implements Comparator<Employee>{
     }
 
     //Java Bean standards followed i.e getter / setter merthods added and a no args public constructor added
+
+    public void employeeDetails(){
+        System.out.println("Name    : " + name);
+        System.out.println("Age     : " + age);
+        System.out.println("D/O/B   : " + dob);
+        System.out.println("Address : " + address);
+        System.out.println("************************\n");
+    }
 
     public int nameEquals(String name){
         if (this.name.equals(name)) {
@@ -38,12 +49,13 @@ public class Employee implements Comparator<Employee>{
 
     @Override
     public String toString(){
-        return "Name : " + name + "\n" + "Age : " + age + "\n" + "D/o/b : " + dob +  "\n" + "Address : " + address;
+       return name;
     }
 
     @Override
-    public int compare(Employee o1, Employee o2) {
-        
-        return 0;
-    } 
+    public int compareTo(Employee o) {
+        return this.getEm(0).compareTo(o.getEm(0));
+    }
+
+   
 }
