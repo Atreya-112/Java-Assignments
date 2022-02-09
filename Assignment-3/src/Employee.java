@@ -13,10 +13,20 @@ public class Employee implements Comparator<Employee>{
         this.dob = dob;    
     }
 
-    public void getEm(){
-        System.out.println("Name : " + name);
-        System.out.print("Age : " + age + "\t");System.out.print("Date of birth : " + dob);
-        System.out.println("Address : " + address); 
+    public String getEm(int i){
+        if (i == 0) {
+            return name;
+        }
+        if (i == 1) {
+            return address;
+        }
+        if (i == 2) {
+            return age;
+        }
+        if (i == 3) {
+            return dob;
+        }
+        return "";
     }
 
     public Employee(){
