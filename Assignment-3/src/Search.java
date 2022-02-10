@@ -1,13 +1,11 @@
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class Search {
     public static void searchByName(ArrayList<Employee> list) throws Exception{
-        Scanner sc = new Scanner(System.in);
         System.out.print("Enter first name : ");
-        String firstName = sc.nextLine();
+        String firstName = Scan.sc.nextLine();
         System.out.print("Enter last name : ");
-        String lastName = sc.nextLine();
+        String lastName = Scan.sc.nextLine();
         int flag = 0; 
         for (Employee employee : list) {
             if (employee.getEm(0).equals(firstName + " " + lastName)) {
@@ -20,24 +18,19 @@ public class Search {
         if (flag == 0) {
             System.out.println("No employee with name : " + firstName + " " + lastName + " exists in our record.");
         }
-        sc.close();
     }
     public static void searchByAge(ArrayList<Employee> list) throws Exception{
-        Scanner sc = new Scanner(System.in);
         System.out.print("Enter age : ");
-        String age = sc.nextLine();
+        String age = Scan.sc.nextLine();
         for (Employee employee : list) {
             if (employee.getEm(2).equals(age)) {
                 System.out.println(employee.toString() + " has age " + employee.getEm(2));
             }    
         }
-        sc.close();
-
     }
     public static void searchByEmail(ArrayList<Employee> list) throws Exception{
-        Scanner sc = new Scanner(System.in);
         System.out.print("Enter email : ");
-        String Email = sc.nextLine();
+        String Email = Scan.sc.nextLine();
         int flag = 0; 
         for (Employee employee : list) {
             if (employee.getEm(1).equals(Email)) {
@@ -50,7 +43,5 @@ public class Search {
         if (flag == 0) {
             System.out.println("No employee with e-mail : " + Email + " exists in our record.");
         }
-        sc.close();
     }
-
 }

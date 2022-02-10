@@ -1,4 +1,4 @@
-public class Employee implements Comparable<Employee>{
+public class Employee{
     private String name;
     private String emailAddress;
     private String age;
@@ -52,10 +52,7 @@ public class Employee implements Comparable<Employee>{
        return name;
     }
 
-    @Override
-    public int compareTo(Employee o) {
-        return this.getEm(0).compareTo(o.getEm(0));
+    public String NameWithAge(){
+        return name + " : " + age;
     }
-
-   
 }

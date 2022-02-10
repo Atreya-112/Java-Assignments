@@ -1,17 +1,15 @@
 import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Scanner;
 
 public class Delete {
-    public  static void main(String[] args) throws Exception {
+    public  static void delete() throws Exception {
         ArrayList<Employee> list = ReadEmp.read();
         Collections.sort(list, new UserNameComparator());
-        Scanner sc = new Scanner(System.in);
         System.out.print("Enter first name : ");
-        String fn = sc.nextLine();
+        String fn = Scan.sc.nextLine();
         System.out.print("Enter last name : ");
-        String ln = sc.nextLine();
+        String ln = Scan.sc.nextLine();
         for (Employee e : list){
             if(e.getEm(0).equals(fn + " " + ln)){
                 list.remove(e);
@@ -40,9 +38,9 @@ public class Delete {
                 }
             }
             writer.close();
+            System.out.println("Employee deleted from record successfully.");
         } catch (Exception e) {
             e.printStackTrace();
         }
-        sc.close();
     }
 }

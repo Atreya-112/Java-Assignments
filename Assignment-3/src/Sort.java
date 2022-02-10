@@ -3,8 +3,8 @@ import java.util.Collections;
 
 public class Sort {
     public static void sortByName(ArrayList<Employee> list){
-            Collections.sort(list,new UserNameComparator());
-            System.out.println(list);
+        Collections.sort(list,new UserNameComparator());
+        System.out.println(list);
     }
     public static void sortByNameDes(ArrayList<Employee> list){
         Collections.sort(list,new UserNameComparator());
