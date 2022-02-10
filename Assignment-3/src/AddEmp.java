@@ -8,7 +8,7 @@ public class AddEmp {
             String fname,lname,emailAddress,age,dob;
             System.out.print("Enter first name : ");fname = Scan.sc.nextLine();
             System.out.print("Enter last name : ");lname = Scan.sc.nextLine();
-            System.out.print("Enter email - address : ");emailAddress = Scan.sc.nextLine();
+            System.out.print("Enter email-address : ");emailAddress = Scan.sc.nextLine();
             System.out.print("Enter age : ");age = Scan.sc.nextLine();
             System.out.print("Enter dob : ");dob = Scan.sc.nextLine();
             writer.append("\n"+fname+" "+lname+","+emailAddress+","+age+","+dob);
@@ -17,6 +17,5 @@ public class AddEmp {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        
     }
 }
