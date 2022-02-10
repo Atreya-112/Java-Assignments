@@ -22,5 +22,17 @@ public class Search {
         }
         sc.close();
     }
+    public static void searchByAge(ArrayList<Employee> list) throws Exception{
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter age : ");
+        String age = sc.nextLine();
+        for (Employee employee : list) {
+            if (employee.getEm(2).equals(age)) {
+                System.out.println(employee.toString() + " has age " + employee.getEm(2));
+            }    
+        }
+        sc.close();
+
+    }
 
 }
