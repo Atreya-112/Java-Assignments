@@ -7,12 +7,13 @@ public class AddEmp {
             Scanner sc = new Scanner(System.in);
             String file  = "Employees.csv";
             FileWriter writer = new FileWriter(file,true);
-            String name,address,age,dob;
-            System.out.print("Enter name : ");name = sc.nextLine();
-            System.out.print("Enter address : ");address = sc.nextLine();
+            String fname,lname,emailAddress,age,dob;
+            System.out.print("Enter first name : ");fname = sc.nextLine();
+            System.out.print("Enter last name : ");lname = sc.nextLine();
+            System.out.print("Enter address : ");emailAddress = sc.nextLine();
             System.out.print("Enter age : ");age = sc.nextLine();
             System.out.print("Enter dob : ");dob = sc.nextLine();
-            writer.append("\n"+name+","+address+","+age+","+dob);
+            writer.append("\n"+fname+" "+lname+","+emailAddress+","+age+","+dob);
             System.out.println("Employee added successfully.");
             writer.close();
             sc.close();
