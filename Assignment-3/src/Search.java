@@ -9,8 +9,7 @@ public class Search {
         int flag = 0; 
         for (Employee employee : list) {
             if (employee.getEm(0).equals(firstName + " " + lastName)) {
-                System.out.println("Exists");
-                System.out.println(employee.toString());
+                System.out.println(employee.toString() + " exists in our record.");
                 flag = 1;
                 break;
             }    

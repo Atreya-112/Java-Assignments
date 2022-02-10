@@ -11,9 +11,11 @@ public class App {
             switch (choice) {
             case "1":
             AddEmp.add();
+            System.out.println();
                 break;
             case "2":
             Delete.delete();
+            System.out.println();
                 break;
             case "3":
             SearchMenu.menu();
@@ -41,6 +43,7 @@ public class App {
                 System.out.println();
                     break;
                 default:
+                System.out.println("Not a valid input no action performed.");
                     break;
             }
             case "0":
