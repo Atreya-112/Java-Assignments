@@ -6,7 +6,7 @@ public class App {
         do {
             ArrayList<Employee> list = ReadEmp.read();
             Menu.menu();
-            System.out.print("Enter you choice : ");
+            System.out.print("Enter your choice : ");
             choice = Scan.sc.nextLine();
             switch (choice) {
             case "1":
