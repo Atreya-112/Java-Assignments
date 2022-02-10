@@ -1,12 +1,12 @@
 public class Employee implements Comparable<Employee>{
     private String name;
-    private String address;
+    private String emailAddress;
     private String age;
     private String dob; //date of birth
 
-    public void setEmp(String name,String address,String age,String dob){
+    public void setEmp(String name,String emailAddress,String age,String dob){
         this.name = name;
-        this.address = address;
+        this.emailAddress = emailAddress;
         this.age = age;
         this.dob = dob;    
     }
@@ -16,7 +16,7 @@ public class Employee implements Comparable<Employee>{
             case 0:
                 return name;
             case 1:
-                return address;
+                return emailAddress;
             case 2:
                 return age;
             case 3:
@@ -36,7 +36,7 @@ public class Employee implements Comparable<Employee>{
         System.out.println("Name    : " + name);
         System.out.println("Age     : " + age);
         System.out.println("D/O/B   : " + dob);
-        System.out.println("Address : " + address);
+        System.out.println("Address : " + emailAddress);
         System.out.println("************************\n");
     }
 
