@@ -24,7 +24,7 @@ class Account {
         System.out.println(name);
     }
 }
-class person extends Thread{
+class Person extends Thread{
     String name;
     Account account;    
     public void run(){
@@ -32,7 +32,7 @@ class person extends Thread{
             account.withdraw(200);
         }
     }
-    person(String name,Account account){
+    Person(String name,Account account){
         this.name = name;
         this.account = account;
     }
@@ -40,8 +40,8 @@ class person extends Thread{
 public class AccountOverdrawDemo {
     public static void main(String[] args) {
         Account a = new Account("Joint Account");
-        person A = new person("Husband", a);
-        person B = new person("Wife",a);
+        Person A = new Person("Husband", a);
+        Person B = new Person("Wife",a);
         A.start();
         B.start();
     }

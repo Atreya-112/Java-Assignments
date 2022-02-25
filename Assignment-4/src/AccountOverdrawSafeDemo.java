@@ -1,4 +1,4 @@
-class accountSafe {
+class AccountSafe {
     private String name;
     private int balance;
     public synchronized void  withdraw(int amount){
@@ -10,7 +10,7 @@ class accountSafe {
             System.out.println("No balance available.");
         }
     }
-    public accountSafe(String name){
+    public AccountSafe(String name){
         this.name = name;
         this.balance = 1000;    
     }
@@ -22,24 +22,24 @@ class accountSafe {
     }
 }
 
-class personSafe extends Thread{
+class PersonSafe extends Thread{
     String name;
-    accountSafe account;    
+    AccountSafe account;    
     public void run(){
         for (int i = 0; i < 5; i++) {
             account.withdraw(200);
         }
     }
-    personSafe(String name,accountSafe account){
+    PersonSafe(String name,AccountSafe account){
         this.name = name;
         this.account = account;
     }
 } 
 public class AccountOverdrawSafeDemo {
     public static void main(String[] args) {
-        accountSafe a = new accountSafe("Joint Account");
-        personSafe A = new personSafe("Husband", a);
-        personSafe B = new personSafe("Wife",a);
+        AccountSafe a = new AccountSafe("Joint Account");
+        PersonSafe A = new PersonSafe("Husband", a);
+        PersonSafe B = new PersonSafe("Wife",a);
         A.start();
         B.start();
     }
