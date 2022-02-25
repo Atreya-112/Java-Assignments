@@ -1,18 +1,14 @@
-## Getting Started
+This is my java assignment - 4 .
+The src repository contains two .java files AccountOverdrawDemo and AccountOverdrawSafeDemo.
+Both classes have main methods.
+Both have classes their own account and person classes.
+Run the main method in both files to and you will find that main method of AccountOverdrawDemo fails to
+keep record of remaining balance in the account while main method of AccountOverdrawSafeDemo is able to do that succesfully.
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+# What does the main method do exactly ? 
+There are two person objects namely Husband and Wife both have same Account object linked to them.
+Both the objects try to withdraw money from the account and when money is withdrawn a command line 
+message of remaining balance is shown.
 
-## Folder Structure
-
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+AccountOverdrawSafeDemo is able to do to show remaning balance succesfully.
+AccountOverdrawDemo is not able to show remaining balance succesfully. 
