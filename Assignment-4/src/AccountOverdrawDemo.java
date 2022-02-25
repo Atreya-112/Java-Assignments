@@ -8,10 +8,10 @@ class Account {
         if (balance >= amount) {
             balance = balance - amount;
             System.out.println(balance + " remaining.");
-        }
+            }
         else{
             System.out.println("No balance available.");
-        }
+            }
     }
     public Account(String name){
         this.name = name;

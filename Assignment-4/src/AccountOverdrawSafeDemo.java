@@ -8,7 +8,7 @@ class AccountSafe {
         }
         else{
             System.out.println("No balance available.");
-        }
+            }
     }
     public AccountSafe(String name){
         this.name = name;
