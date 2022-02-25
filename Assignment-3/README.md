@@ -1,11 +1,3 @@
-## JAVA ASSIGNMENT 3
-
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources (contains the whole code).
-- `bin`: the folder to maintain .class files. 
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
 
 ## HOW THIS EMPLOYEE RECORD SYSTEM WORKS ??
 
