@@ -5,7 +5,7 @@ class AccountSafe {
         if (balance >= amount) {
             balance = balance - amount;
             System.out.println(balance + " remaining.");
-        }
+            }
         else{
             System.out.println("No balance available.");
             }
